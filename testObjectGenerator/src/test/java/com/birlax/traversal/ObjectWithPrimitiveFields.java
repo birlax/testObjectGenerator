@@ -2,6 +2,9 @@ package com.birlax.traversal;
 
 public class ObjectWithPrimitiveFields {
 
+	/**
+	 * Primitive Boolean
+	 */
 	private boolean primitiveBoolean;
 	private byte primitiveByte;
 	private short primitiveShort;
