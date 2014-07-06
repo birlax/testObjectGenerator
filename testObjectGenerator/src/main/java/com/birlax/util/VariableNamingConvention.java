@@ -8,5 +8,7 @@ public interface VariableNamingConvention {
 	 * @param name
 	 * @return
 	 */
-	String simpleName(String name);
+	String getSimpleVariableName(String name);
+
+    String getSimpleSetterName(String name);
 }

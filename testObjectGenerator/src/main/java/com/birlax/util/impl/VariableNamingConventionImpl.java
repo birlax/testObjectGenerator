@@ -23,8 +23,8 @@ public class VariableNamingConventionImpl implements VariableNamingConvention {
 	private static final int DESIREDCHSRUPPERBOUND = 122;
 
 	@Override
-	public String simpleName(String name) {
-		if (name.isEmpty())
+    public String getSimpleVariableName(String name) {
+        if (name == null || name.isEmpty())
 			return randomFieldNameGenerator();
 		if (name.length() == 1) {
 			return name.toLowerCase();
@@ -32,6 +32,7 @@ public class VariableNamingConventionImpl implements VariableNamingConvention {
 
 		return name.substring(0, 1).toLowerCase() + name.substring(1);
 	}
+
 
 	private String randomFieldNameGenerator() {
 
@@ -49,5 +50,20 @@ public class VariableNamingConventionImpl implements VariableNamingConvention {
 		randomNamedFieldsCount++;
 		return new String(randomName) + "" + randomNamedFieldsCount;
 	}
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String getSimpleSetterName(String name) {
+        if (name == null || name.isEmpty())
+            return "";
+        if (name.length() == 1) {
+            return "get" + name.toUpperCase();
+        }
+
+        return "get" + name.substring(0, 1).toUpperCase() + name.substring(1);
+
+    }
 
 }

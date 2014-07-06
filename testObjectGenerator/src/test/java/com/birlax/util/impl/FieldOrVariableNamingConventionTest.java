@@ -16,10 +16,10 @@ public class FieldOrVariableNamingConventionTest {
 	
 	@Test
 	public void testSimpleName() {
-		LOG.info(field.simpleName(""));
-		LOG.info(field.simpleName(""));
-		LOG.info(field.simpleName("FieldOrVariableNamingConventionImpl"));
-		LOG.info(field.simpleName(""));
-		LOG.info(field.simpleName(""));
+        LOG.info(field.getSimpleVariableName(null));
+		LOG.info(field.getSimpleVariableName(""));
+		LOG.info(field.getSimpleVariableName("FieldOrVariableNamingConventionImpl"));
+		LOG.info(field.getSimpleVariableName(""));
+        LOG.info(field.getSimpleVariableName("234"));
 	}
 }

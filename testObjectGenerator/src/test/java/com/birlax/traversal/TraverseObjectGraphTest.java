@@ -1,6 +1,6 @@
 package com.birlax.traversal;
 
-import java.lang.reflect.Field;
+import java.util.Collections;
 
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -11,7 +11,7 @@ import com.birlax.util.impl.VariableNamingConventionImpl;
 
 public class TraverseObjectGraphTest {
 
-	TraverseObjectGraph traverseObjectGraph = new TraverseObjectGraph();
+    TraverseObjectGraph traverseObjectGraph = TraverseObjectGraph.getTestObjectGenerator();
 	
 	VariableNamingConvention fieldOrVariableNamingConvention = new VariableNamingConventionImpl();
 	private static Logger LOG = LoggerFactory
@@ -19,19 +19,6 @@ public class TraverseObjectGraphTest {
 
 	@Test
 	public void test() {
-		LOG.info(TraverseObjectGraph.class.getSimpleName());
-		String classSimplerName = TraverseObjectGraph.class.getSimpleName();
-		String variableNameForClass =  fieldOrVariableNamingConvention.simpleName("");
-		LOG.info(variableNameForClass);
-		LOG.info(" = new ");
-		LOG.info(classSimplerName);
-		LOG.info("();");
-		ObjectWithPrimitiveFields objectWithPrimitiveFields = new ObjectWithPrimitiveFields();
-		
-		for (Field field : objectWithPrimitiveFields.getClass()
-				.getDeclaredFields()) {
-			LOG.info(variableNameForClass + ".set"+field.getName()+"(45);");
-		}
-
+        traverseObjectGraph.generate(Collections.singletonList("com.birlax.traversal.ObjectWithPrimitiveFields"));
 	}
 }

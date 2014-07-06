@@ -1,5 +1,8 @@
 package com.birlax.traversal;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ObjectWithPrimitiveFields {
 
 	/**
@@ -9,10 +12,27 @@ public class ObjectWithPrimitiveFields {
 	private byte primitiveByte;
 	private short primitiveShort;
 	private int primitiveInt;
+
+    private Double bigDouble;
+
+    private ObjectWithPrimitiveFields generalRefTypeClass;
+
+    private List rawGenericTypeList;
+
+    private ArrayList<String> concreateGenericType;
+
+    private ObjectWithPrimitiveFields[] arrayClass;
+
 	private long primitiveLong;
 	private char primitiveChar;
 	private float primitiveFloat;
 	private double primitivedouble;
+
+    private List[] rawListArray;
+
+    private List<String>[] listArray;
+
+    private Object op;
 
 	public boolean isPrimitiveBoolean() {
 		return primitiveBoolean;
