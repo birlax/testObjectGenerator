@@ -13,26 +13,26 @@ public class ObjectWithPrimitiveFields {
 	private short primitiveShort;
 	private int primitiveInt;
 
-    private Double bigDouble;
+	private Double bigDouble;
 
-    private ObjectWithPrimitiveFields generalRefTypeClass;
+	private ObjectWithPrimitiveFields generalRefTypeClass;
 
-    private List rawGenericTypeList;
+	private List rawGenericTypeList;
 
-    private ArrayList<String> concreateGenericType;
+	private ArrayList<String> concreateGenericType;
 
-    private ObjectWithPrimitiveFields[] arrayClass;
+	private ObjectWithPrimitiveFields[] arrayClass;
 
 	private long primitiveLong;
 	private char primitiveChar;
 	private float primitiveFloat;
 	private double primitivedouble;
 
-    private List[] rawListArray;
+	private List[] rawListArray;
 
-    private List<String>[] listArray;
+	private List<String>[] listArray;
 
-    private Object op;
+	private Object op;
 
 	public boolean isPrimitiveBoolean() {
 		return primitiveBoolean;

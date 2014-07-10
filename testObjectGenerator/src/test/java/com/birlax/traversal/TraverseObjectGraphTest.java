@@ -10,15 +10,14 @@ import com.birlax.util.VariableNamingConvention;
 import com.birlax.util.impl.VariableNamingConventionImpl;
 
 public class TraverseObjectGraphTest {
-
+    
     TraverseObjectGraph traverseObjectGraph = TraverseObjectGraph.getTestObjectGenerator();
-	
-	VariableNamingConvention fieldOrVariableNamingConvention = new VariableNamingConventionImpl();
-	private static Logger LOG = LoggerFactory
-			.getLogger(TraverseObjectGraph.class);
-
-	@Test
-	public void test() {
-        traverseObjectGraph.generate(Collections.singletonList("com.birlax.traversal.ObjectWithPrimitiveFields"));
-	}
+    
+    VariableNamingConvention fieldOrVariableNamingConvention = new VariableNamingConventionImpl();
+    private static Logger LOG = LoggerFactory.getLogger(TraverseObjectGraph.class);
+    
+    @Test
+    public void test() {
+        traverseObjectGraph.generate(Collections.singletonList("com.birlax.traversal.Parent"));
+    }
 }
